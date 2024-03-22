@@ -28,12 +28,13 @@
 }
 
 .hid-box {
-  top: 75%;
+  top: 70%;
   position: relative;
   transition: all .3s ease-out;
   background: #00000040;
   height: 100%;
   text-align: right;
+  padding: 0 1vw;
 }
 
 .project_img_box:hover>.hid-box {
@@ -44,13 +45,14 @@
 .project_title {
   font-size: 2.5vw;
   color: #FFFFFF;
-  margin-bottom: 1vh;
-  height: 70px;
+  padding-bottom: 1vh;
+  margin: 0;
 }
 
 .project_description {
   font-size: 1.3vw;
   color: #FFFFFF;
+  margin: 0;
 }
 
 .pagination {

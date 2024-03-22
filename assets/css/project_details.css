@@ -5,12 +5,16 @@
 
 
 .project_details_wrapper {
-    margin: 6vh 6vw !important;
+    margin: 0 6vw !important;
+    top: 100%;
+    position: relative;
+    transition: all 1s ease-out;
+    justify-content: center;
 }
 
 scroll_img_wrapper::-webkit-scrollbar {
     display: none !important;
-  }
+}
 
 .card_sidebar {
     background-color: white;
@@ -33,6 +37,14 @@ scroll_img_wrapper::-webkit-scrollbar {
 
 .main_pic {
     width: 100%;
+}
+
+.scroll_img_wrapper button {
+    border: 0;
+}
+
+.scroll_img_wrapper button:focus {
+    outline: 0;
 }
 
 .scroll_img_wrapper {

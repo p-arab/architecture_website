@@ -9,7 +9,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/index.css">
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/projects.css">
+  <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/about_us.css ">
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/contact_us.css">
+  <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/project_details.css">
 
   <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
   <script src="../assets/js/bootstrap/jquery-3.6.0.js"></script>
@@ -19,24 +21,24 @@
 <body>
   <div class="white_bg_container">
     <div id="blue_bg_container" class="blue_bg_container">
-      <img id="logo_animation_img" class="logo_animation_img" src="../assets/images/logo_animation.gif" />
-      <img id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-Fa.png" />
+      <img id="logo_animation_img" class="logo_animation_img" src="../assets/images/zhikan-logo-gif.gif" />
+      <img id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-en.png" />
 
       <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
         <a href="#" onclick="ShowProject()">پروژه ها</a>
-        <a href="./about_us.html">درباره ما</a>
+        <a href="#" onclick="showAboutUs()">درباره ما</a>
         <a href="#" onclick="ShowContactUs()">تماس با ما</a>
         <a href="#">مجله</a>
       </div>
 
       <div id="language_wrapper" class="language_wrapper">
-        <a href="#">فارسی</a>
+        <div class="language_txt">فارسی</div>
       </div>
     </div>
     <div id="projects_wrapper" class="projects_wrapper">
       <div id="project_section" class="row">
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -47,7 +49,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -58,7 +60,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -69,7 +71,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -80,7 +82,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -91,7 +93,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -102,7 +104,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -113,7 +115,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -124,7 +126,7 @@
           </div>
         </a>
 
-        <a href="./project_details.html" class="project_card_wrapper col-12 col-md-4">
+        <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
           <div class="project_img_box">
             <div class="hid-box">
               <p class="project_title">ویلا شمال</p>
@@ -158,7 +160,134 @@
       </div>
     </div>
 
+    <div id="about_us_wrapper" class="about_us_wrapper">
+      <div class="row_top_wrapper">
+        <div class="col-12 col-md-6 pl-0 d-flex align-items-center">
+          <div class="gray_txt">
+            <span class="blue_txt">
+              گروه مهندسین ژیکان
+            </span>
+            ، متشکل از کارشناسان ارشد رشته های معماری، سازه، زلزله، تاسیسات برقی و تاسیسات مکانیکی، فعالیت حرفه
+            ای
+            خود را در جهت ارائه خدمات تخصصی طراحی، نظارت و اجرای پروژه های عمرانی از سال 1394 آغاز نموده است.هدف
+            اصلی فعالیت های مجموعه ژیکان، ارتقای کیفیت خدمات طراحی و اجرای پروژه های عمرانی کشور با شناخت کامل
+            چالش
+            ها و ظرفیت های بومی و ملی و به کارگیری اصول مهندسی روز دنیا می باشد.
+          </div>
+        </diV>
+        <div class="col-12 col-md-6">
+          <img src="../assets/images/team_pic.png" class="team_img" />
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="person_card_wrapper col-12 col-md-3">
+          <div class="person_img_box">
+            <img src="../assets/images/person.png">
+            <div class="person_hid_box">
+              <p class="person_title">علیرضا آزادی</p>
+              <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
+                توضیح
+                بیشتر قرار داده شده است.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_wrapper">
+        <span class="gray_footer">
+          کلیه ی حقوق این سایت مربوط به
+          <span class="colored_footer">
+            گروه مهندسین مشاور ژیکان طرح و توسعه
+          </span>
+          است.
+        </span>
+      </div>
+    </div>
 
 
     <div id="contact_us_wrapper" class="contact_us_wrapper">
@@ -234,6 +363,84 @@
 
   </div>
 
+
+  <div id="project_details_wrapper" class="row project_details_wrapper">
+    <div class="col-12 col-md-4 pr-0 ">
+      <div class="card_sidebar">
+        <div class="title_sidebar">
+          عنوان پروژه
+        </div>
+        <div class="desc_sidebar">
+          کارفرما: جناب اقای حدادی
+        </div>
+        <div class="desc_sidebar">
+          خدمات: طراحی
+        </div>
+        <div class="desc_sidebar">
+          مکان: تهران
+        </div>
+        <div class="desc_sidebar">
+          زمان: 1395
+        </div>
+      </div>
+    </div>
+    <div class="c0l-12 col-md-8 pl-0" style="overflow: hidden;">
+      <img id="main_pic" class="main_pic" src="../assets/images/Project-Pic.png" alt="Main Picture">
+      <div class="c0l-12 p-0 scroll_img_wrapper">
+        <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+          <img src="../assets/images/Project-Pic.png" alt="Picture">
+        </button>
+        <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+          <img src="../assets/images/Project-Pic2.png" alt="Picture">
+        </button>
+        <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+          <img src="../assets/images/Project-Pic.png" alt="Picture">
+        </button>
+        <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+          <img src="../assets/images/Project-Pic2.png" alt="Picture">
+        </button>
+        <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+          <img src="../assets/images/Project-Pic.png" alt="Picture">
+        </button>
+        <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+          <img src="../assets/images/Project-Pic2.png" alt="Picture">
+        </button>
+        <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+          <img src="../assets/images/Project-Pic.png" alt="Picture">
+        </button>
+        <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+          <img src="../assets/images/Project-Pic2.png" alt="Picture">
+        </button>
+      </div>
+
+      <div class="detail_title">
+        تایتل
+      </div>
+      <div class="detail_desc">
+        اولین نشانه های استفاده ار آهن به زمان سومریان و مصریان برمیگردد که تقریبا 4000 سال قبل از میلاد با آهن کشف شده
+        از شهاب سنگ ها اقلام کوچک مثل سرنیزه و زیورآلات می ساختند.از آهن ظاهرا تنها در تشریفات استفاده میشد و آهن فلزی
+        گرانبها حتی با ارزش تر از طلا به حساب می آمد.آهن به عنوان یک محصول جانبی تصفیه مس تولیدمی شود و بوسیله متالورژی
+        آن زمان قابل تولید مجدد نبوده است.این فرایند در کوره های ساده با استفاده از ذغال چوب و دمش هوا به صورت دستی
+        انجام می شد. از 1600 تا 1200 قبل از میلاد در خاورمیانه بطور روزافزون از این فلز استفاده می شد، اما جایگزین
+        کاربرد برنز در آن زمان نشد.از 1200تا 1000سال قبل از میلاد در خاورمیانه یک جابجایی سریع در تبدیل ابزار و سلاح های
+        برنزی به آهنی صورت گرفت.عامل مهم در این جابجایی مختل شدن تامین قلع بود. این دوره که در زمان های مختلف و در نقاط
+        مختلفی از جهان رخ داد، دوره ای از تمدن به نام عصر آهن را به وجود آورد.
+      </div>
+    </div>
+
+    <div class="footer_wrapper">
+      <span class="gray_footer">
+        کلیه ی حقوق این سایت مربوط به
+        <span class="colored_footer">
+          گروه مهندسین مشاور ژیکان طرح و توسعه
+        </span>
+        است.
+      </span>
+    </div>
+
+  </div>
+
+
   <script>
     let div = $("div[class='blue_bg_container']");
     window.onload = function () {
@@ -249,7 +456,7 @@
         document.getElementById("logo_animation_img").style.display = "none";
         document.getElementById("logo_img").style.display = "flex";
         myFunc()
-      }, 6100)
+      }, 11000)
 
       function myFunc() {
         let img = document.getElementById("logo_img");
@@ -270,6 +477,8 @@
 
     function ShowProject() {
       document.getElementById('contact_us_wrapper').style.top = '100%'
+      document.getElementById('about_us_wrapper').style.top = '100%'
+      document.getElementById('project_details_wrapper').style.top = '100%'
       document.getElementById('projects_wrapper').style.display = 'block'
 
       let img = document.getElementById("logo_img");
@@ -293,12 +502,50 @@
       }, 500)
       setTimeout(function () {
         document.getElementById('contact_us_wrapper').style.display = 'none'
+        document.getElementById('about_us_wrapper').style.display = 'none'
+        document.getElementById('project_details_wrapper').style.display = 'none'
         document.body.style.overflowY = 'scroll'
       }, 1500)
     }
 
+    function showAboutUs() {
+      document.getElementById('contact_us_wrapper').style.top = '100%'
+      document.getElementById('projects_wrapper').style.top = '100%'
+      document.getElementById('project_details_wrapper').style.top = '100%'
+      document.getElementById('about_us_wrapper').style.display = 'block'
+
+      let img = document.getElementById("logo_img");
+      let oldRight = img.offsetLeft;
+      let top = img.offsetTop;
+      document.documentElement.style.setProperty('--logo-img-right', oldRight + "px");
+
+      let menu = document.getElementById("menu_desktop_wrapper");
+      let oldTop = menu.offsetTop;
+      document.documentElement.style.setProperty('--menu-wrapper-top', oldTop + "px");
+
+
+      document.getElementById('logo_img').style.animation = 'logoRightMove 2s forwards'
+      document.getElementById('language_wrapper').style.animation = 'moving-to-header-lang 2s forwards'
+      document.getElementById('menu_desktop_wrapper').style.animation = 'moving-to-header-menu 2s forwards'
+
+      setTimeout(function () {
+        document.getElementById('about_us_wrapper').style.position = 'absolute'
+        document.getElementById('about_us_wrapper').style.top = '20%'
+        document.getElementById('blue_bg_container').style.padding = '0 10%'
+      }, 500)
+      setTimeout(function () {
+        document.getElementById('contact_us_wrapper').style.display = 'none'
+        document.getElementById('projects_wrapper').style.display = 'none'
+        document.getElementById('project_details_wrapper').style.display = 'none'
+        document.body.style.overflowY = 'scroll'
+      }, 1500)
+    }
+
+
     function ShowContactUs() {
       document.getElementById('projects_wrapper').style.top = '100%'
+      document.getElementById('about_us_wrapper').style.top = '100%'
+      document.getElementById('project_details_wrapper').style.top = '100%'
       document.getElementById('contact_us_wrapper').style.display = 'block'
 
       let img = document.getElementById("logo_img");
@@ -322,10 +569,31 @@
       }, 500)
       setTimeout(function () {
         document.getElementById('projects_wrapper').style.display = 'none'
+        document.getElementById('about_us_wrapper').style.display = 'none'
+        document.getElementById('project_details_wrapper').style.display = 'none'
         document.body.style.overflow = 'hidden'
       }, 1500)
     }
 
+    function showProjectDetails() {
+      document.getElementById('projects_wrapper').style.top = '100%'
+      document.getElementById('project_details_wrapper').style.display = 'flex'
+
+      setTimeout(function () {
+        document.getElementById('project_details_wrapper').style.position = 'absolute'
+        document.getElementById('project_details_wrapper').style.top = '20%'
+      }, 500)
+      setTimeout(function () {
+        document.getElementById('projects_wrapper').style.display = 'none'
+        document.body.style.overflowY = 'scroll'
+      }, 1500)
+    }
+
+
+    function changeMainImage(value) {
+      console.log("path is ", value)
+      document.getElementById("main_pic").src = value
+    }
 
   </script>
 
