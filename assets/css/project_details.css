@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "peyda-medium";
+    src: url("../fonts/FA/Peyda/Peyda-Medium.ttf");
+}
+
+
+.project_details_wrapper {
+    margin: 6vh 6vw !important;
+}
+
+scroll_img_wrapper::-webkit-scrollbar {
+    display: none !important;
+  }
+
+.card_sidebar {
+    background-color: white;
+    padding: 2vw;
+    border-radius: 12px;
+    display: grid;
+    gap: 2.5vh;
+    text-align: right;
+}
+
+.title_sidebar {
+    font-size: 2vw;
+    color: #303031;
+}
+
+.desc_sidebar {
+    font-size: 1.2 vw;
+    color: #303031;
+}
+
+.main_pic {
+    width: 100%;
+}
+
+.scroll_img_wrapper {
+    margin: 4vh 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 2vw;
+}
+
+.scroll_img_wrapper img {
+    width: 120px;
+}
+
+.detail_title {
+    font-size: 4vh;
+    color: #303031;
+    text-align: right;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+}
+
+.detail_desc {
+    font-size: 3vh;
+    color: #303031;
+    text-align: right;
+    line-height: 5vh;
+}
