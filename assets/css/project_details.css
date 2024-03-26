@@ -12,6 +12,15 @@
     justify-content: center;
 }
 
+.project_details_wrapper>div:first-child {
+    padding-right: 0;
+}
+
+.project_details_wrapper>div:nth-child(2) {
+    padding-left: 0;
+}
+
+
 scroll_img_wrapper::-webkit-scrollbar {
     display: none !important;
 }
@@ -73,3 +82,12 @@ scroll_img_wrapper::-webkit-scrollbar {
     text-align: right;
     line-height: 5vh;
 }
+
+@media screen and (max-width: 768px) {
+    .project_details_wrapper>div {
+        padding: 0 !important;
+    }
+    .project_details_wrapper>div:first-child {
+        margin-bottom: 6vh;
+    }
+  }
