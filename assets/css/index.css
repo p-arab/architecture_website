@@ -29,6 +29,7 @@ body {
   direction: rtl;
   background-color: #F2F2F3 !important;
   overflow: hidden;
+  font-weight: 500;
 }
 
 .white_bg_container {
