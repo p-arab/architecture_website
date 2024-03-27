@@ -191,7 +191,7 @@
     </div>
 
     <div id="about_us_wrapper" class="about_us_wrapper">
-      <div class="row_top_wrapper">
+      <div class="row_top_wrapper row m-0">
         <div class="col-12 col-md-6 pl-0 d-flex align-items-center">
           <div class="gray_txt">
             <span class="blue_txt">
@@ -210,8 +210,8 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="person_card_wrapper col-12 col-md-3">
+      <div class="row justify-content-center">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -223,7 +223,7 @@
           </div>
         </div>
 
-        <div class="person_card_wrapper col-12 col-md-3">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -235,7 +235,7 @@
           </div>
         </div>
 
-        <div class="person_card_wrapper col-12 col-md-3">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -247,7 +247,7 @@
           </div>
         </div>
 
-        <div class="person_card_wrapper col-12 col-md-3">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -259,7 +259,7 @@
           </div>
         </div>
 
-        <div class="person_card_wrapper col-12 col-md-3">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -271,7 +271,7 @@
           </div>
         </div>
 
-        <div class="person_card_wrapper col-12 col-md-3">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -283,7 +283,7 @@
           </div>
         </div>
 
-        <div class="person_card_wrapper col-12 col-md-3">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -295,7 +295,7 @@
           </div>
         </div>
 
-        <div class="person_card_wrapper col-12 col-md-3">
+        <div class="person_card_wrapper col-9 col-md-3">
           <div class="person_img_box">
             <img src="../assets/images/person.png">
             <div class="person_hid_box">
@@ -561,9 +561,14 @@
       document.documentElement.style.setProperty('--menu-wrapper-top', oldTop + "px");
 
 
-      document.getElementById('logo_img').style.animation = 'logoRightMove 2s forwards'
       document.getElementById('language_wrapper').style.animation = 'moving-to-header-lang 2s forwards'
-      document.getElementById('menu_desktop_wrapper').style.animation = 'moving-to-header-menu 2s forwards'
+      if (window.matchMedia('screen and (max-width: 768px)').matches) {
+        document.getElementById('menu_desktop_wrapper').style.animation = 'fadeOut 2s forwards'
+      }
+      else {
+        document.getElementById('logo_img').style.animation = 'logoRightMove 2s forwards'
+        document.getElementById('menu_desktop_wrapper').style.animation = 'moving-to-header-menu 2s forwards'
+      }
 
       setTimeout(function () {
         document.getElementById('about_us_wrapper').style.position = 'absolute'
@@ -597,7 +602,6 @@
 
       document.getElementById('language_wrapper').style.animation = 'moving-to-header-lang 2s forwards'
       if (window.matchMedia('screen and (max-width: 768px)').matches) {
-        // document.getElementById('logo_img').style.animation = 'logoRightMove 2s forwards'
         document.getElementById('menu_desktop_wrapper').style.animation = 'fadeOut 2s forwards'
         document.body.style.overflowY = 'scroll'
       }

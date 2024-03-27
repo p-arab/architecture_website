@@ -27,7 +27,7 @@
 }
 
 .person_list_wrapper {
-  padding: 0 6vw; 
+  padding: 0 6vw;
 }
 
 .person_card_wrapper {
@@ -81,8 +81,32 @@ img {
   .blue_txt {
     font-size: 4vw;
   }
+
   .gray_txt {
     font-size: 3vw;
     margin-top: 4vh;
+  }
+
+  .row_top_wrapper {
+    flex-direction: column-reverse;
+    padding-bottom: 5vh;
+  }
+
+  .person_title {
+    font-size: 6vw;
+  }
+
+  .project_description {
+    font-size: 2.7vw;
+  }
+
+  .person_hid_box {
+    top: 90%;
+    padding: 0 2vw;
+  }
+
+  .person_img_box:hover>.person_hid_box {
+    top: 75%;
+    background: #00000080;
   }
 }
