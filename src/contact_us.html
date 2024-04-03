@@ -5,13 +5,80 @@
     <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
     <script src="../assets/js/bootstrap/jquery-3.6.0.js"></script>
     <script src="../assets/js/bootstrap/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/contact_us.css">
+    <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/footer.css">
+
 </head>
 
-<body style="font-family: peyda-medium !important;
-direction: rtl;
-background-color: #F2F2F3 !important;
-overflow-x: hidden;">
-   
+<body>
+    <div id="contact_us_wrapper" class="contact_us_wrapper">
+        <div class="d-flex flex-wrap">
+            <div class="col-12 col-md-6 input_contact_wrapper">
+                <div class=" row m-0 justify-content-between">
+                    <div class="col-12 col-md-6 pr-0">
+                        <input placeholder="نام و نام خانوادگی" class="w-100" type="text" id="fname" name="fname">
+                    </div>
+                    <div class="col-12 col-md-6 pl-0">
+                        <input placeholder="ایمیل" class="w-100" type="text" id="fname" name="fname">
+                    </div>
+                </div>
+                <div class=" row m-0 justify-content-between">
+                    <div class="col-12 col-md-6 pr-0">
+                        <input placeholder="موضوع" class="w-100" type="text" id="fname" name="fname">
+                    </div>
+                    <div class="col-12 col-md-6 pl-0">
+                        <input placeholder="دپارتمان" class="w-100" type="text" id="fname" name="fname">
+                    </div>
+                </div>
+                <div class="col-12 p-0">
+                    <textarea placeholder="پیغام" class="w-100" id="w3review" name="w3review" rows="4"
+                        cols="50"></textarea>
+                </div>
+                <div class="row m-0">
+                    <button disabled class="send_btn col-12 col-md-3">
+                        ارسال
+                    </button>
+                </div>
+            </div>
+
+            <div class="contact_us_map col-12 col-md-6">
+                <div>
+                    <img class="map_img" src="../assets/images/map.png" alt="Map Location" />
+                </div>
+
+                <div class="row m-0 text-right">
+                    <div class="col-6 p-0">
+                        <img class="contact_icon" alt="Pocket Icon" src="../assets/images/sms.png">
+                        <span>
+                            info@zhikan.com
+                        </span>
+                    </div>
+                    <div class="col-6 p-0">
+                        <img class="contact_icon" alt="Phone Icon" src="../assets/images/call.png">
+                        <span>
+                            021-88215037
+                        </span>
+                    </div>
+                </div>
+                <div class="m-0 text-right">
+                    <img class="contact_icon" alt="Phone Icon" src="../assets/images/location.png">
+                    <span>
+                        تهران، میدان شیخ بهایی-خیابان دانشور شرقی-پلاک ۳۶ طبقه ۳ واحد ۵
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_wrapper" class="footer_wrapper footer_contact_us mt-0">
+            <span class="gray_footer">
+                کلیه ی حقوق این سایت مربوط به
+                <span class="colored_footer">
+                    گروه مهندسین مشاور ژیکان طرح و توسعه
+                </span>
+                است.
+            </span>
+        </div>
+    </div>
 </body>
 
 </html>

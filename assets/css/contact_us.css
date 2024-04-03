@@ -1,19 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "peyda-medium";
     src: url("../fonts/FA/Peyda/Peyda-Medium.ttf");
 }
 
+body {
+    font-family: "peyda-medium" !important;
+    direction: rtl;
+    background-color: #F2F2F3 !important;
+    overflow: auto;
+    font-weight: 500;
+}
+
 .contact_us_wrapper {
     margin: 0 6vw;
-    height: 80vh;
-    top: 100%;
+    height: -webkit-fill-available;
+    /* top: 100%; */
     position: relative;
     transition: all 1s ease-out;
 }
 
 .footer_contact_us {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     text-align: center;
 }
@@ -82,13 +92,17 @@ textarea:focus-visible {
 }
 
 @media screen and (min-width: 768px) {
-    .input_contact_wrapper, .contact_us_map {
+
+    .input_contact_wrapper,
+    .contact_us_map {
         padding: 0 0 0 1.5rem !important;
     }
+
     .input_contact_wrapper input,
     textarea {
         font-size: 1.2vw !important;
     }
+
     .input_contact_wrapper>div {
         padding-bottom: 4vh !important;
         gap: 0;
@@ -99,10 +113,19 @@ textarea:focus-visible {
     .input_contact_wrapper>div>div {
         padding: 0 !important;
     }
+
     .contact_icon {
         width: 6vw;
     }
+
     .contact_us_map {
         flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer_contact_us {
+        position: absolute;
+        bottom: 0;
     }
 }
