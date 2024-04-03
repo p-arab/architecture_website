@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .about_us_wrapper {
   /* top: 100%; */
   position: relative;

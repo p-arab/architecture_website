@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "peyda-medium";
+    src: url("../fonts/FA/Peyda/Peyda-Medium.ttf");
+  }
+  
+  body {
+    font-family: "peyda-medium" !important;
+    direction: rtl;
+    background-color: #F2F2F3 !important;
+    font-weight: 500;
+  }
+
+.footer_wrapper {
+    text-align: center;
+    margin-top: 3%;
+  }
+  
+  .gray_footer {
+    color: #797979;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .colored_footer {
+    color: #263F99;
+  }
+
+  @media screen and (max-width: 768px) {
+    .gray_footer {
+      font-size: 3.3vw;
+    }
+  }
