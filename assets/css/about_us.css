@@ -1,5 +1,5 @@
 .about_us_wrapper {
-  top: 100%;
+  /* top: 100%; */
   position: relative;
   transition: all 1s ease-out;
   margin: 0 6vw;
