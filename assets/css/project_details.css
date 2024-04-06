@@ -1,12 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "peyda-medium";
     src: url("../fonts/FA/Peyda/Peyda-Medium.ttf");
 }
 
+body {
+    font-family: "peyda-medium" !important;
+    direction: rtl;
+    background-color: #F2F2F3 !important;
+    font-weight: 500;
+    overflow: auto;
+}
+
 
 .project_details_wrapper {
     margin: 0 6vw !important;
-    top: 100%;
+    /* top: 100%; */
     position: relative;
     transition: all 1s ease-out;
     justify-content: center;
@@ -87,10 +99,12 @@ scroll_img_wrapper::-webkit-scrollbar {
     .project_details_wrapper>div {
         padding: 0 !important;
     }
+
     .project_details_wrapper>div:first-child {
         margin-bottom: 6vh;
     }
+
     .title_sidebar {
         font-size: 6vw;
     }
-  }
+}
