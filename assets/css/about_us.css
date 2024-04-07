@@ -3,8 +3,8 @@ html {
 }
 
 .about_us_wrapper {
-  /* top: 100%; */
-  position: relative;
+  top: 20%;
+  position: absolute;
   transition: all 1s ease-out;
   margin: 0 6vw;
 }

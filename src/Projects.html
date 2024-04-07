@@ -1,14 +1,73 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/projects.css">
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/footer.css">
+
+    <script type="text/javascript" src="../assets/js/header.js" async></script>
+    <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/header.css">
+
     <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
     <script src="../assets/js/bootstrap/jquery-3.6.0.js"></script>
     <script src="../assets/js/bootstrap/bootstrap.js"></script>
 </head>
 
 <body>
+    <div id="blue_bg_container" class="blue_bg_container">
+
+        <img id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-en.png" />
+
+        <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
+            <a href="#" onclick="showProjects()">پروژه ها</a>
+            <a href="#" onclick="showAboutUs()">درباره ما</a>
+            <a href="#" onclick="showContactUs()">تماس با ما</a>
+            <!-- <a href="#">مجله</a> -->
+            <a class="dropdown">
+                مجله
+                <div class="dropdown-content">
+                    <p>منو تستی</p>
+                    <p>منو تستی</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div id="language_wrapper" class="language_wrapper">
+            <div class="language_txt">فارسی</div>
+        </div>
+
+
+        <nav role='navigation' class="d-block d-md-none">
+            <div id="menuToggle" class="">
+                <input id="checkbox" type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#" onclick="showProjects()">
+                        <li>پروژه ها</li>
+                    </a>
+                    <a href="#" onclick="showAboutUs()">
+                        <li>درباره ما</li>
+                    </a>
+                    <a href="#" onclick="showContactUs()">
+                        <li>تماس با ما</li>
+                    </a>
+                    <a class="dropdown">
+                        <li>مجله</li>
+                        <div class="dropdown-content">
+                            <p>منو تستی</p>
+                        </div>
+                    </a>
+                    <!-- <a href="#">
+                <li>مجله</li>
+              </a> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div id="projects_wrapper" class="projects_wrapper">
         <div id="project_section" class="row">
 
@@ -134,29 +193,7 @@
         </div>
     </div>
 
-    <!-- <iframe id="project_details_wrapper"
-        style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;"
-        src="project_details.html" width="100%" frameborder="0"></iframe> -->
 
-
-    <script>
-        function showProjectDetails() {
-            // document.getElementById('projects_wrapper').style.top = '100%'
-            // parent.document.getElementById('projects_wrapper').style.animation = 'fadeOut 2s'
-            parent.document.getElementById('project_details_wrapper').style.display = 'flex'
-            // document.getElementById('checkbox').checked = false
-
-            setTimeout(function () {
-                parent.document.getElementById('project_details_wrapper').style.position = 'absolute'
-                parent.document.getElementById('project_details_wrapper').style.top = '20%'
-            }, 500)
-            setTimeout(function () {
-                parent.document.getElementById('projects_wrapper').style.display = 'none'
-                document.body.style.overflowY = 'scroll'
-            }, 1500)
-        }
-
-    </script>
 </body>
 
 </html>

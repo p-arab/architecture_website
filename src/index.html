@@ -26,8 +26,8 @@
       <img id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-en.png" />
 
       <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
-        <a href="#" onclick="ShowProject()">پروژه ها</a>
-        <a href="#" onclick="showAboutUs()">درباره ما</a>
+        <a href="#" onclick="ShowProjects()">پروژه ها</a>
+        <a href="#" onclick="ShowAboutUs()">درباره ما</a>
         <a href="#" onclick="ShowContactUs()">تماس با ما</a>
         <!-- <a href="#">مجله</a> -->
         <a class="dropdown">
@@ -52,10 +52,10 @@
           <span></span>
           <span></span>
           <ul id="menu">
-            <a href="#" onclick="ShowProject()">
+            <a href="#" onclick="ShowProjects()">
               <li>پروژه ها</li>
             </a>
-            <a href="#" onclick="showAboutUs()">
+            <a href="#" onclick="ShowAboutUs()">
               <li>درباره ما</li>
             </a>
             <a href="#" onclick="ShowContactUs()">
@@ -74,21 +74,29 @@
         </div>
       </nav>
     </div>
-   
-    <iframe id="projects_wrapper" style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;" src="Projects.html" width="100%" frameborder="0"></iframe>
 
-    <iframe id="project_details_wrapper" style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;" src="project_details.html" width="100%" frameborder="0"></iframe>
-    
-    <iframe id="about_us_wrapper" style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;" src="about_us.html" width="100%" frameborder="0"></iframe>
+    <!-- <iframe id="projects_wrapper"
+      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
+      src="Projects.html" width="100%" frameborder="0"></iframe>
 
-    <iframe id="contact_us_wrapper" style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;" src="contact_us.html" width="100%" frameborder="0"></iframe>
+    <iframe id="project_details_wrapper"
+      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
+      src="project_details.html" width="100%" frameborder="0"></iframe>
+
+    <iframe id="about_us_wrapper"
+      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
+      src="about_us.html" width="100%" frameborder="0"></iframe>
+
+    <iframe id="contact_us_wrapper"
+      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
+      src="contact_us.html" width="100%" frameborder="0"></iframe> -->
   </div>
 
 
-  
 
 
- 
+
+
 
 
   <script>
@@ -129,12 +137,7 @@
       }
     }
 
-    function ShowProject() {
-      let projectElement = document.getElementById('projects_wrapper')
-      document.getElementById('contact_us_wrapper').style.top = '100%'
-      document.getElementById('about_us_wrapper').style.top = '100%'
-      document.getElementById('project_details_wrapper').style.top = '100%'
-      projectElement.style.display = 'block'
+    function ShowProjects() {
       document.getElementById('checkbox').checked = false
 
       let img = document.getElementById("logo_img");
@@ -158,23 +161,14 @@
       }
 
       setTimeout(function () {
-        document.getElementById('projects_wrapper').style.position = 'absolute'
-        document.getElementById('projects_wrapper').style.top = '20%'
         document.getElementById('blue_bg_container').style.padding = '0 10%'
       }, 500)
       setTimeout(function () {
-        document.getElementById('contact_us_wrapper').style.display = 'none'
-        document.getElementById('about_us_wrapper').style.display = 'none'
-        document.getElementById('project_details_wrapper').style.display = 'none'
-        document.body.style.overflowY = 'scroll'
+        window.location.href = "Projects.html"
       }, 1500)
     }
 
-    function showAboutUs() {
-      document.getElementById('contact_us_wrapper').style.top = '100%'
-      document.getElementById('projects_wrapper').style.top = '100%'
-      document.getElementById('project_details_wrapper').style.top = '100%'
-      document.getElementById('about_us_wrapper').style.display = 'block'
+    function ShowAboutUs() {
       document.getElementById('checkbox').checked = false
 
       let img = document.getElementById("logo_img");
@@ -198,23 +192,15 @@
       }
 
       setTimeout(function () {
-        document.getElementById('about_us_wrapper').style.position = 'absolute'
-        document.getElementById('about_us_wrapper').style.top = '20%'
         document.getElementById('blue_bg_container').style.padding = '0 10%'
       }, 500)
       setTimeout(function () {
-        document.getElementById('contact_us_wrapper').style.display = 'none'
-        document.getElementById('projects_wrapper').style.display = 'none'
-        document.getElementById('project_details_wrapper').style.display = 'none'
         document.body.style.overflowY = 'scroll'
+        window.location.href = "about_us.html"
       }, 1500)
     }
 
     function ShowContactUs() {
-      document.getElementById('projects_wrapper').style.top = '100%'
-      document.getElementById('about_us_wrapper').style.top = '100%'
-      document.getElementById('project_details_wrapper').style.top = '100%'
-      document.getElementById('contact_us_wrapper').style.display = 'block'
       document.getElementById('checkbox').checked = false
 
       let img = document.getElementById("logo_img");
@@ -240,14 +226,10 @@
       }
 
       setTimeout(function () {
-        document.getElementById('contact_us_wrapper').style.position = 'absolute'
-        document.getElementById('contact_us_wrapper').style.top = '20%'
         document.getElementById('blue_bg_container').style.padding = '0 10%'
       }, 500)
       setTimeout(function () {
-        document.getElementById('projects_wrapper').style.display = 'none'
-        document.getElementById('about_us_wrapper').style.display = 'none'
-        document.getElementById('project_details_wrapper').style.display = 'none'
+        window.location.href = "about_us.html"
       }, 1500)
     }
 
