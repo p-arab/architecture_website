@@ -71,50 +71,37 @@
     </div>
 
     <div id="project_details_wrapper" class="row project_details_wrapper">
-        <div class="col-12 col-md-4 ">
-            <div class="card_sidebar">
-                <div class="title_sidebar">
-                    عنوان پروژه
-                </div>
-                <div class="desc_sidebar">
-                    کارفرما: جناب اقای حدادی
-                </div>
-                <div class="desc_sidebar">
-                    خدمات: طراحی
-                </div>
-                <div class="desc_sidebar">
-                    مکان: تهران
-                </div>
-                <div class="desc_sidebar">
-                    زمان: 1395
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-8" style="overflow: hidden;">
-            <a href="./project_details_gallery.html">
-                <img id="main_pic" class="main_pic" src="../assets/images/Project-Pic.png" alt="Main Picture">
-            </a>
 
-            <div class="detail_title">
-                تایتل
+        <div class="col-12 col-md-8" style="overflow: hidden;">
+            <img id="main_pic" class="main_pic" src="../assets/images/Project-Pic.png" alt="Main Picture">
+            <div id="scroll_img_wrapper" class="col-12 p-0 scroll_img_wrapper">
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
             </div>
-            <div class="detail_desc">
-                اولین نشانه های استفاده ار آهن به زمان سومریان و مصریان برمیگردد که تقریبا 4000 سال قبل از میلاد با آهن
-                کشف شده
-                از شهاب سنگ ها اقلام کوچک مثل سرنیزه و زیورآلات می ساختند.از آهن ظاهرا تنها در تشریفات استفاده میشد و
-                آهن فلزی
-                گرانبها حتی با ارزش تر از طلا به حساب می آمد.آهن به عنوان یک محصول جانبی تصفیه مس تولیدمی شود و بوسیله
-                متالورژی
-                آن زمان قابل تولید مجدد نبوده است.این فرایند در کوره های ساده با استفاده از ذغال چوب و دمش هوا به صورت
-                دستی
-                انجام می شد. از 1600 تا 1200 قبل از میلاد در خاورمیانه بطور روزافزون از این فلز استفاده می شد، اما
-                جایگزین
-                کاربرد برنز در آن زمان نشد.از 1200تا 1000سال قبل از میلاد در خاورمیانه یک جابجایی سریع در تبدیل ابزار و
-                سلاح های
-                برنزی به آهنی صورت گرفت.عامل مهم در این جابجایی مختل شدن تامین قلع بود. این دوره که در زمان های مختلف و
-                در نقاط
-                مختلفی از جهان رخ داد، دوره ای از تمدن به نام عصر آهن را به وجود آورد.
-            </div>
+
+
         </div>
 
         <div class="footer_wrapper">
@@ -133,6 +120,21 @@
         function changeMainImage(value) {
             document.getElementById("main_pic").src = value
         }
+        let childCount = document.getElementById("scroll_img_wrapper").children.length
+        let i = 2
+        function myLoop() {
+            setTimeout(function () {
+                let image = document.querySelector(`.scroll_img_wrapper button:nth-child(${i}) img`)
+                changeMainImage(image.src)
+                console.log("sff", i, image.src)
+                i++;
+                if (i <= childCount) {
+                    myLoop();
+                }
+            }, 2000)
+        }
+
+        myLoop()
     </script>
 </body>
 
