@@ -70,10 +70,39 @@
         </nav>
     </div>
 
-    <div id="project_details_wrapper" class="row project_details_wrapper">
+    <div id="project_details_wrapper" class="row project_details_wrapper" style="height: -webkit-fill-available;">
+        <div class="col-12 col-md-3 scroll_coll">
+            <div id="scroll_img_wrapper" class="col-12 p-0 scroll_img_wrapper_desktop" >
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
+                    <img src="../assets/images/Project-Pic.png" alt="Picture">
+                </button>
+                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
+                    <img src="../assets/images/Project-Pic2.png" alt="Picture">
+                </button>
+            </div>
+        </div>
 
         <div class="col-12 col-md-8" style="overflow: hidden;">
             <img id="main_pic" class="main_pic" src="../assets/images/Project-Pic.png" alt="Main Picture">
+            
             <div id="scroll_img_wrapper" class="col-12 p-0 scroll_img_wrapper">
                 <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
                     <img src="../assets/images/Project-Pic.png" alt="Picture">
@@ -101,7 +130,6 @@
                 </button>
             </div>
 
-
         </div>
 
         <div class="footer_wrapper">
@@ -126,7 +154,6 @@
             setTimeout(function () {
                 let image = document.querySelector(`.scroll_img_wrapper button:nth-child(${i}) img`)
                 changeMainImage(image.src)
-                console.log("sff", i, image.src)
                 i++;
                 if (i <= childCount) {
                     myLoop();
