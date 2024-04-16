@@ -56,7 +56,7 @@ body {
 
 .logo_img {
   display: none;
-  width: 250px;
+  width: 261px;
   position: absolute;
   /* animation: mymove 5s infinite; */
   animation-iteration-count: 1;
@@ -186,7 +186,7 @@ body {
   }
 
   50% {
-    transform: translateY(-50px);
+    transform: translateY(-10px);
   }
 
   100% {
@@ -407,6 +407,9 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 5vh;
+  }
+  .menu_desktop_wrapper a {
+    font-size: 4vw;
   }
   .separate_line {
     display: none;
