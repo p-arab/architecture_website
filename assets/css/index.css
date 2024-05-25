@@ -142,8 +142,8 @@ body {
 }
 
 .menu_desktop_wrapper {
-  width: 40%;
-  justify-content: space-between;
+  width: 45%;
+  /* justify-content: space-between; */
   display: none;
   position: absolute;
   height: 50vh;
@@ -169,16 +169,53 @@ body {
   height: 100%;
 }
 
-.child {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  transform-origin: bottom;
+.desktop_menu_item {
+  color: #303031 !important;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: reduce_width;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-duration: .5s;
 }
 
-.bounce:hover {
+.desktop_menu_item:hover {
+  animation-name: increase_width;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-duration: .5s;
+}
+
+@keyframes increase_width {
+  0% {
+    width: 25%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+
+@keyframes reduce_width {
+  0% {
+    width: 35%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
+.child {
+  /* animation-iteration-count: infinite; */
+  /* transform-origin: bottom; */
+}
+
+/* .bounce:hover {
   animation-name: bounce;
   animation-timing-function: ease;
-}
+} */
 
 @keyframes bounce {
   0% {

@@ -27,19 +27,22 @@
 
       <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
         <div class="separate_line"></div>
-        <a href="#" class="child bounce" onclick="ShowProjects()">پروژه ها</a>
+        <a href="#" class="desktop_menu_item child bounce" onclick="ShowProjects()">پروژه ها</a>
         <div class="separate_line"></div>
-        <a href="#" class="child bounce" onclick="ShowAboutUs()">درباره ما</a>
+        <a href="#" class="desktop_menu_item child bounce" onclick="ShowAboutUs()">درباره ما</a>
         <div class="separate_line"></div>
-        <a href="#" class="child bounce" onclick="ShowContactUs()">تماس با ما</a>
+        <a href="#" class="desktop_menu_item child bounce" onclick="ShowContactUs()">تماس با
+          ما</a>
         <div class="separate_line"></div>
-        <a class="dropdown">
-          مجله
-          <div class="dropdown-content">
-            <p>منو تستی</p>
-            <p>منو تستی</p>
-          </div>
-        </a>
+        <div class="desktop_menu_item">
+          <a class="dropdown">
+            مجله
+            <div class="dropdown-content">
+              <p>منو تستی</p>
+              <p>منو تستی</p>
+            </div>
+          </a>
+        </div>
         <div class="separate_line"></div>
 
       </div>
@@ -80,21 +83,6 @@
       </nav>
     </div>
 
-    <!-- <iframe id="projects_wrapper"
-      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
-      src="Projects.html" width="100%" frameborder="0"></iframe>
-
-    <iframe id="project_details_wrapper"
-      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
-      src="project_details.html" width="100%" frameborder="0"></iframe>
-
-    <iframe id="about_us_wrapper"
-      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
-      src="about_us.html" width="100%" frameborder="0"></iframe>
-
-    <iframe id="contact_us_wrapper"
-      style="height: -webkit-fill-available;position: relative; transition: all 1s ease-out;display: none;"
-      src="contact_us.html" width="100%" frameborder="0"></iframe> -->
   </div>
 
 
@@ -119,26 +107,24 @@
         document.getElementById("logo_animation_img").style.display = "none";
         document.getElementById("logo_img").style.display = "flex";
         myFunc()
-      }, 11000)
+      }, 8000)
 
       function myFunc() {
         let img = document.getElementById("logo_img");
         let oldTop = img.offsetTop;
         document.documentElement.style.setProperty('--logo-img-top', oldTop + "px");
 
-        setTimeout(function () {
-          if (window.matchMedia('screen and (max-width: 768px)').matches) {
-            document.getElementById('logo_img').style.animation = 'mymoveMobile 2s forwards'
-          }
-          else
-            document.getElementById('logo_img').style.animation = 'mymove 2s forwards'
-          document.getElementById('language_wrapper').style.animation = 'languageMove 2s forwards'
-        }, 1000)
+        if (window.matchMedia('screen and (max-width: 768px)').matches) {
+          document.getElementById('logo_img').style.animation = 'mymoveMobile 2s forwards'
+        }
+        else
+          document.getElementById('logo_img').style.animation = 'mymove 2s forwards'
+        document.getElementById('language_wrapper').style.animation = 'languageMove 2s forwards'
 
         setTimeout(function () {
           document.getElementById("menu_desktop_wrapper").style.display = "flex";
           document.getElementById("language_wrapper").style.display = "flex";
-        }, 1300)
+        }, 300)
       }
     }
 

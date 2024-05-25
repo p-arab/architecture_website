@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const slides = document.querySelectorAll('.slides img');
   const thumbnails = document.querySelectorAll('.thumbnail-container img');
   const thumbnailContainer = document.querySelector('.thumbnail-container');
-  const playPauseBtn = document.querySelector('.play-pause-btn');
+  const playPauseBtn = document.querySelector('#play-pause-btn');
+  const playPauseImg = document.getElementById("play-pause-img") 
   let currentIndex = 0;
   let intervalId;
 
@@ -23,12 +24,20 @@ document.addEventListener('DOMContentLoaded', function () {
       updateThumbnail(currentIndex);
       updateThumbnailScroll();
     }, 2000);
-    playPauseBtn.textContent = 'Pause';
+    // playPauseBtn.textContent = 'Pause';
+    playPauseBtn.className = "pause";
+
+    // playPauseImg.src = '../assets/images/pause.svg';
+    console.log("play ", playPauseBtn)
   }
 
   function pauseSlideshow() {
     clearInterval(intervalId);
-    playPauseBtn.textContent = 'Play';
+    // playPauseBtn.textContent = 'Play';
+    console.log("pause ", playPauseBtn)
+    playPauseBtn.className = "play";  
+
+    // playPauseImg.src = '../assets/images/play-32.png';
   }
 
   function updateThumbnailScroll() {
@@ -48,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   playPauseBtn.addEventListener('click', function () {
-    if (playPauseBtn.textContent === 'Play') {
+    if (playPauseBtn.className === 'play') {
       playSlideshow();
     } else {
       pauseSlideshow();
