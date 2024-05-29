@@ -2,12 +2,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پروژه  ها</title>
+    <title>پروژه ها</title>
 
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/projects.css">
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/footer.css">
 
     <script type="text/javascript" src="../assets/js/header.js" async></script>
+    <script type="text/javascript" src="../assets/js/projects.js"></script>
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/header.css">
 
     <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
@@ -71,128 +72,41 @@
     </div>
     <div id="projects_wrapper" class="projects_wrapper">
         <div id="project_section" class="row">
-
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
+            <div class="col-12 col-md-4 d-none d-md-block">
+                <div class="category_wrapper">
+                    <ul>
+                        <li><a href="#" data-id="All">All</a></li>
+                        <li><a href="#" data-id="Villa">Villa</a></li>
+                        <li><a href="#" data-id="Beach">Beach</a></li>
+                        <li><a href="#" data-id="Home">Home</a></li>
+                        <li><a href="#" data-id="Project">Project</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="project-column" class="col-12 col-md-8 row">
+                <div>
+                    <div class="pagination">
+                        <a href="#" class="ml-3">
+                            < </a>
+                                <a href="#">3</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">1</a>
+                                <a href="#" class="mr-3">></a>
                     </div>
                 </div>
-            </a>
+            </div>
 
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-            </a>
 
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4">
-                <div class="project_img_box">
-                    <div class="hid-box">
-                        <p class="project_title">ویلا شمال</p>
-                        <p class="project_description">متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای
-                            توضیح
-                            بیشتر قرار داده شده است.</p>
-                    </div>
-                </div>
-        </div>
-        </a>
-
-        <div>
-            <div class="pagination">
-                <a href="#" class="ml-3">
-                    < </a>
-                        <a href="#">3</a>
-                        <a href="#" class="active">2</a>
-                        <a href="#">1</a>
-                        <a href="#" class="mr-3">></a>
+            <div class="footer_wrapper">
+                <span class="gray_footer">
+                    کلیه ی حقوق این سایت مربوط به
+                    <span class="colored_footer">
+                        گروه مهندسین مشاور ژیکان طرح و توسعه
+                    </span>
+                    است.
+                </span>
             </div>
         </div>
-
-        <div class="footer_wrapper">
-            <span class="gray_footer">
-                کلیه ی حقوق این سایت مربوط به
-                <span class="colored_footer">
-                    گروه مهندسین مشاور ژیکان طرح و توسعه
-                </span>
-                است.
-            </span>
-        </div>
-    </div>
 
 
 </body>

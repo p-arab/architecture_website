@@ -27,6 +27,33 @@ body {
   padding: 0 80px;
 }
 
+.category_wrapper {
+  background-color: white;
+  padding: 2vw;
+  border-radius: 12px;
+  text-align: right;
+}
+
+.category_wrapper ul{
+  display: grid;
+  gap: 2.5vh;
+  list-style: none;
+}
+
+.category_wrapper a {
+  font-size: 1.2 vw;
+  color: #303031;
+}
+
+.category_wrapper a:hover, .category_wrapper li a:active {
+  /* font-size: 1.2 vw; */
+  color: #263F99;
+  text-decoration: none;
+}
+
+.disable_project {
+  opacity: .3;
+}
 .project_card_wrapper:hover {
   text-decoration: none !important;
 }
