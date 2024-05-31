@@ -1,3 +1,8 @@
+.limit_body {
+    display: flex;
+    justify-content: center;
+}
+
 .blue_bg_container {
     padding: 0 80px !important;
     display: flex;

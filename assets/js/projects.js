@@ -54,13 +54,6 @@ const projectList = [
         category: 'Villa',
         img: '../images/Project-Pic.png',
         description: 'متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای توضیح بیشتر قرار داده شده است.'
-    },
-    {
-        id: 1,
-        title: 'ویلا شمال',
-        category: 'Villa',
-        img: '../images/Project-Pic.png',
-        description: 'متن زیری که برای توضیح بیشتر قرار داده شده است. متن زیری که برای توضیح بیشتر قرار داده شده است.'
     }
 ]
 
@@ -127,15 +120,15 @@ function displayProjectList(category) {
     if (category) {
         displayData = projectList.map(function (item) {
             if (category[0].category !== item.category) {
-                return `<a onclick="showProjectDetails()" class="disable_project project_card_wrapper col-12 col-md-4"><div class="project_img_box"><div class="hid-box"><p class="project_title">${item.title}</p><p class="project_description">${item.description}</p></div></div></a>`;
+                return `<a onclick="showProjectDetails()" class="disable_project project_card_wrapper"><div class="project_img_box"><div class="hid-box"><p class="project_title">${item.title}</p><p class="project_description">${item.description}</p></div></div></a>`;
             } else {
-                return `<a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4"><div class="project_img_box"><div class="hid-box"><p class="project_title">${item.title}</p><p class="project_description">${item.description}</p></div></div></a>`;
+                return `<a onclick="showProjectDetails()" class="project_card_wrapper"><div class="project_img_box"><div class="hid-box"><p class="project_title">${item.title}</p><p class="project_description">${item.description}</p></div></div></a>`;
             }
         });
 
     } else {
         displayData = projectList.map(function (item) {
-            return `<a onclick="showProjectDetails()" class="project_card_wrapper col-12 col-md-4"><div class="project_img_box"><div class="hid-box"><p class="project_title">${item.title}</p><p class="project_description">${item.description}</p></div></div></a>`;
+            return `<a onclick="showProjectDetails()" class="project_card_wrapper"><div class="project_img_box"><div class="hid-box"><p class="project_title">${item.title}</p><p class="project_description">${item.description}</p></div></div></a>`;
         });
     }
     displayData = displayData.join("");

@@ -16,11 +16,9 @@
     <script src="../assets/js/bootstrap/bootstrap.js"></script>
 </head>
 
-<body>
+<body class="limit_body">
     <div id="blue_bg_container" class="blue_bg_container">
-
         <img id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-en.png" />
-
         <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
             <a href="#" onclick="showProjects()">پروژه ها</a>
             <a href="#" onclick="showAboutUs()">درباره ما</a>
@@ -71,8 +69,9 @@
         </nav>
     </div>
 
-    <div id="project_details_wrapper" class="row project_details_wrapper" style="height: -webkit-fill-available; justify-content: center;">
-        <div class="col-12 col-md-5">
+    <div id="project_details_wrapper" class="row project_details_wrapper"
+        style="height: -webkit-fill-available; justify-content: center;">
+        <div class="col-12 col-sm-5" style="min-width: 335px; max-width: 350px;">
             <div class="thumbnail-container">
                 <img src="../assets/images/Project-Pic.png" alt="Thumbnail 1">
                 <img src="../assets/images/Project-Pic2.png" alt="Thumbnail 2">
@@ -93,7 +92,7 @@
                 <button class="info-btn" onclick="history.back()">اطلاعات</button>
             </div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-sm-7">
             <div class="slideshow-container">
                 <div class="slides">
                     <img src="../assets/images/Project-Pic.png" alt="Slide 1">
@@ -105,14 +104,14 @@
                     <img src="../assets/images/Project-Pic2.png" alt="Thumbnail 3">
                     <img src="../assets/images/Project-Pic3.jpg" alt="Thumbnail 4">
                 </div>
-                
+
                 <button id="play-pause-btn" class="play">
                     <!-- <div id="play-pause-img" class="play"></div> -->
                 </button>
             </div>
         </div>
-       
-        
+
+
 
 
 
@@ -178,7 +177,7 @@
 
         </div> -->
 
-       
+
 
 
         <!-- <div class="footer_wrapper">

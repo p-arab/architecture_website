@@ -170,7 +170,7 @@ body {
 }
 
 .desktop_menu_item {
-  color: #303031 !important;
+  /* color: #303031 !important;
   width: 25%;
   height: 100%;
   display: flex;
@@ -179,20 +179,33 @@ body {
   animation-name: reduce_width;
   animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
-  animation-duration: .5s;
+  animation-duration: .5s; */
+
+  height: 100%;
+  flex: 1;
+  /* overflow: hidden; */
+  cursor: pointer;
+  /* border-radius: 2px;  */
+  transition: all .5s;
+  /* background: #7FB77E;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .desktop_menu_item:hover {
-  animation-name: increase_width;
+  /* animation-name: increase_width;
   animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
-  animation-duration: .5s;
+  animation-duration: .5s; */
+  flex: 1.7;
 }
 
 @keyframes increase_width {
   0% {
     width: 25%;
   }
+
   100% {
     width: 35%;
   }
@@ -202,6 +215,7 @@ body {
   0% {
     width: 35%;
   }
+
   100% {
     width: 25%;
   }
@@ -432,7 +446,7 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .dropdown:hover .dropdown-content {
@@ -445,9 +459,11 @@ body {
     align-items: center;
     gap: 5vh;
   }
+
   .menu_desktop_wrapper a {
     font-size: 4vw;
   }
+
   .separate_line {
     display: none;
   }

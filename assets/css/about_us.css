@@ -3,6 +3,7 @@ html {
 }
 
 .about_us_wrapper {
+  max-width: 1024px;
   top: 20%;
   position: absolute;
   transition: all 1s ease-out;

@@ -17,6 +17,7 @@ body {
 
 
 .project_details_wrapper {
+    max-width: 1024px;
     padding: 0 6vw !important;
     top: 20%;
     position: absolute;
@@ -216,9 +217,11 @@ scroll_img_wrapper::-webkit-scrollbar {
     border: 0;
     color: transparent;
 }
+
 #play-pause-btn:focus {
     outline: 0;
 }
+
 .play {
     /* width: 17px;
     height: 15px; */
