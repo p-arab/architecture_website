@@ -2,6 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 
+[lang="en"] body {
+  direction: ltr;
+}
+
+[lang="fa"] body {
+  direction: rtl;
+}
+
 .about_us_wrapper {
   max-width: 1200px;
   top: 20%;
@@ -19,6 +27,7 @@ html {
   display: flex;
   padding-bottom: 7vh;
 }
+
 
 .gray_txt {
   color: #616161;
@@ -74,12 +83,14 @@ img {
   padding-bottom: 2.3vh;
   /* height: 40px; */
   margin: 0;
+  text-align: right;
 }
 
 .project_description {
   font-size: 1.3vw;
   color: #FFFFFF;
   padding-bottom: 1vh;
+  text-align: right;
 }
 
 @media screen and (max-width: 768px) {
@@ -114,4 +125,10 @@ img {
     top: 75%;
     background: #00000080;
   }
+}
+
+[lang='en'] .gray_txt,
+[lang='en'] .person_title,
+[lang='en'] .project_description {
+  text-align: left;
 }
