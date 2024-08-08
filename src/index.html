@@ -1,10 +1,11 @@
-<html>
+<html lang="en">
 
 <head>
 
-  <title>ژیکان</title>
+  <title data-i18n="zhikan"></title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/index.css">
@@ -27,29 +28,23 @@
 
       <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
         <div class="separate_line"></div>
-        <a href="#" class="desktop_menu_item child bounce" onclick="ShowProjects()">پروژه ها</a>
+        <a href="#" class="desktop_menu_item child bounce" onclick="ShowProjects()" data-i18n="projects"></a>
         <div class="separate_line"></div>
-        <a href="#" class="desktop_menu_item child bounce" onclick="ShowAboutUs()">درباره ما</a>
+        <a href="#" class="desktop_menu_item child bounce" onclick="ShowAboutUs()" data-i18n="about_us"></a>
         <div class="separate_line"></div>
-        <a href="#" class="desktop_menu_item child bounce" onclick="ShowContactUs()">تماس با
-          ما</a>
+        <a href="#" class="desktop_menu_item child bounce" onclick="ShowContactUs()" data-i18n="contact_us"></a>
         <div class="separate_line"></div>
-        <div class="desktop_menu_item">
-          <a class="dropdown">
-            مجله
-            <div class="dropdown-content">
-              <p>منو تستی</p>
-              <p>منو تستی</p>
-            </div>
-          </a>
-        </div>
+        <a href="#" class="desktop_menu_item" data-i18n="our_colleagues"></a>
         <div class="separate_line"></div>
 
       </div>
 
 
       <div id="language_wrapper" class="language_wrapper">
-        <div class="language_txt">فارسی</div>
+        <span id="language_txt_fa" class="language_txt pl-2" href="index.html"
+          onclick="toggleSelectedLanguage('fa')">فارسی</span>
+        <span id="language_txt_en" class="language_txt" href="index.html"
+          onclick="toggleSelectedLanguage('en')">English</span>
       </div>
 
 
@@ -222,6 +217,97 @@
       setTimeout(function () {
         window.location.href = "about_us.html"
       }, 1500)
+    }
+
+
+
+
+
+
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      const userPreferredLanguage = localStorage.getItem('language') || 'fa';
+      const langData = await fetchLanguageData(userPreferredLanguage);
+      updateContent(langData);
+      toggleArabicStylesheet(userPreferredLanguage);
+
+      const optionFa = document.getElementById('language_txt_fa')
+      const optionEn = document.getElementById('language_txt_en')
+      if (userPreferredLanguage === 'fa') {
+          optionFa.style.display = 'flex'
+          optionEn.style.display = 'none'
+        } else if (userPreferredLanguage === 'en') {
+          optionEn.style.display = 'flex'
+          optionFa.style.display = 'none'
+        }  
+      // toggleSelectedLanguage(userPreferredLanguage)
+    });
+
+    async function changeLanguage(lang) {
+      await setLanguagePreference(lang);
+
+      const langData = await fetchLanguageData(lang);
+      updateContent(langData);
+      toggleArabicStylesheet(lang); // Toggle Arabic stylesheet
+    }
+
+
+    function updateContent(langData) {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = langData[key];
+      });
+    }
+
+    function setLanguagePreference(lang) {
+      localStorage.setItem('language', lang);
+      // location.reload();
+    }
+
+    async function fetchLanguageData(lang) {
+      const response = await fetch(`languages/${lang}.json`);
+      return response.json();
+    }
+
+    function toggleArabicStylesheet(lang) {
+      const head = document.querySelector('head');
+      const link = document.querySelector('#styles-link');
+
+      if (link) {
+        head.removeChild(link);
+      } else if (lang === 'fa') {
+        const newLink = document.createElement('link');
+        newLink.id = 'styles-link';
+        newLink.rel = 'stylesheet';
+        newLink.href = './assets/css/style-fa.css';
+        head.appendChild(newLink);
+      }
+    }
+
+    function toggleSelectedLanguage(lang) {
+      const optionFa = document.getElementById('language_txt_fa')
+      const optionEn = document.getElementById('language_txt_en')
+      const positionFa = getComputedStyle(optionFa).position
+      const displayFa = getComputedStyle(optionFa).display
+      const positionEn = getComputedStyle(optionEn).position
+
+      if (positionFa === 'absolute') {
+        optionFa.style.position = 'relative'
+        optionEn.style.position = 'relative'
+        optionFa.style.display = 'flex'
+        optionEn.style.display = 'flex'
+      } else {
+        optionFa.style.position = 'absolute'
+        optionEn.style.position = 'absolute'
+        if (lang === 'fa') {
+          optionFa.style.display = 'flex'
+          optionEn.style.display = 'none'
+        } else if (lang === 'en') {
+          optionEn.style.display = 'flex'
+          optionFa.style.display = 'none'
+        }  
+        changeLanguage(lang)
+      }
     }
 
 
