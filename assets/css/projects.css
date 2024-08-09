@@ -15,6 +15,14 @@ body {
   overflow: auto;
 }
 
+[lang="en"] body {
+  direction: ltr;
+}
+
+[lang="fa"] body {
+  direction: rtl;
+}
+
 .projects_wrapper {
   max-width: 1200px;
   top: 20%;
@@ -147,4 +155,12 @@ body {
   #project-column {
     padding: 0 1rem;
   }
+}
+
+[lang="en"] .category_wrapper {
+  text-align: left;
+}
+
+[lang="en"] .hid-box {
+  text-align: left;
 }

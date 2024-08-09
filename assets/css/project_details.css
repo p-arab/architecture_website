@@ -27,15 +27,6 @@ body {
     /* flex-direction: row-reverse; */
 }
 
-.project_details_wrapper>div:first-child {
-    padding-right: 0;
-}
-
-.project_details_wrapper>div:nth-child(2) {
-    padding-left: 0;
-}
-
-
 scroll_img_wrapper::-webkit-scrollbar {
     display: none !important;
 }
@@ -256,4 +247,21 @@ scroll_img_wrapper::-webkit-scrollbar {
     .project_details_wrapper>div {
         padding: 0 !important;
     }
+}
+
+[lang="fa"] .project_details_wrapper>div:first-child,
+[lang="en"] .project_details_wrapper>div:nth-child(2) {
+    padding-right: 0;
+}
+
+[lang="fa"] .project_details_wrapper>div:nth-child(2),
+[lang="en"] .project_details_wrapper>div:first-child {
+    padding-left: 0;
+}
+
+
+[lang="en"] .detail_title,
+[lang="en"] .detail_desc,
+[lang="en"] .card_sidebar {
+    text-align: left;
 }

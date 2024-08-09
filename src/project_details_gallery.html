@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>گالری پروژه</title>
+    <title data-i18n="zhikan_title"></title>
 
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/project_details.css">
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/footer.css">
@@ -20,22 +20,18 @@
     <div id="blue_bg_container" class="blue_bg_container">
         <img id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-en.png" />
         <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
-            <a href="#" onclick="showProjects()">پروژه ها</a>
-            <a href="#" onclick="showAboutUs()">درباره ما</a>
-            <a href="#" onclick="showContactUs()">تماس با ما</a>
-            <!-- <a href="#">مجله</a> -->
-            <a class="dropdown">
-                مجله
-                <div class="dropdown-content">
-                    <p>منو تستی</p>
-                    <p>منو تستی</p>
-                </div>
-            </a>
+            <a href="#" onclick="showProjects()" data-i18n="projects"></a>
+            <a href="#" onclick="showAboutUs()" data-i18n="about_us"></a>
+            <a href="#" onclick="showContactUs()" data-i18n="contact_us"></a>
+            <a href="#" onclick="showContactUs()" data-i18n="our_colleagues"></a>
         </div>
 
 
         <div id="language_wrapper" class="language_wrapper">
-            <div class="language_txt">فارسی</div>
+            <span id="language_txt_fa" class="language_txt px-2" href="#"
+                onclick="toggleSelectedLanguage('fa')">فارسی</span>
+            <span id="language_txt_en" class="language_txt" href="#"
+                onclick="toggleSelectedLanguage('en')">English</span>
         </div>
 
 
@@ -47,22 +43,22 @@
                 <span></span>
                 <ul id="menu">
                     <a href="#" onclick="showProjects()">
-                        <li>پروژه ها</li>
+                        <li data-i18n="projects"></li>
                     </a>
                     <a href="#" onclick="showAboutUs()">
-                        <li>درباره ما</li>
+                        <li data-i18n="about_us"></li>
                     </a>
                     <a href="#" onclick="showContactUs()">
-                        <li>تماس با ما</li>
+                        <li data-i18n="contact_us"></li>
                     </a>
                     <a class="dropdown">
-                        <li>مجله</li>
+                        <li data-i18n="other"></li>
                         <div class="dropdown-content">
-                            <p>منو تستی</p>
+                            <p data-i18n="our_colleagues"></p>
                         </div>
                     </a>
                     <!-- <a href="#">
-                <li>مجله</li>
+                <li data-i18n="other"></li>
               </a> -->
                 </ul>
             </div>
@@ -89,7 +85,7 @@
                 <img src="../assets/images/Project-Pic.png" alt="Thumbnail 2">
                 <img src="../assets/images/Project-Pic2.png" alt="Thumbnail 3">
                 <img src="../assets/images/Project-Pic3.jpg" alt="Thumbnail 4">
-                <button class="info-btn" onclick="history.back()">اطلاعات</button>
+                <button class="info-btn" onclick="history.back()" data-i18n="information"></button>
             </div>
         </div>
         <div class="col-12 col-sm-8">
@@ -113,107 +109,18 @@
 
 
 
-
-
-
-        <!-- <div class="col-12 col-md-3 scroll_coll">
-            <div id="scroll_img_wrapper" class="col-12 p-0 scroll_img_wrapper_desktop" >
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-            </div>
-        </div> -->
-
-        <!-- <div class="col-12 col-md-8" style="overflow: hidden;">
-            <img id="main_pic" class="main_pic" src="../assets/images/Project-Pic.png" alt="Main Picture">
-            
-            <div id="scroll_img_wrapper" class="col-12 p-0 scroll_img_wrapper">
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic.png')">
-                    <img src="../assets/images/Project-Pic.png" alt="Picture" class="">
-                </button>
-                <button onclick="changeMainImage('../assets/images/Project-Pic2.png')">
-                    <img src="../assets/images/Project-Pic2.png" alt="Picture" class="">
-                </button>
-            </div>
-
-        </div> -->
-
-
-
-
-        <!-- <div class="footer_wrapper">
+        <div class="footer_wrapper">
             <span class="gray_footer">
-                کلیه ی حقوق این سایت مربوط به
-                <span class="colored_footer">
-                    گروه مهندسین مشاور ژیکان طرح و توسعه
-                </span>
-                است.
+                <span data-i18n="all_rights"></span>
+                <span class="colored_footer" data-i18n="jikan_group"></span>
+                <span data-i18n="is"></span>
             </span>
-        </div> -->
+        </div>
 
     </div>
 
     <script src="../assets/js/project_details_gallery.js"></script>
-    <script>
-        // function changeMainImage(value) {
-        //     document.getElementById("main_pic").src = value
-        // }
-        // let childCount = document.getElementById("scroll_img_wrapper").children.length
-        // let i = 2
-        // function myLoop() {
-        //     setTimeout(function () {
-        //         let image = document.querySelector(`#scroll_img_wrapper button:nth-child(${i}) img`)
-        //         console.log("image ", image)
-        //         image.style.opacity = 1;
-        //         changeMainImage(image.src)
-        //         i++;
-        //         if (i <= childCount) {
-        //             myLoop();
-        //         }
-        //     }, 2000)
-        // }
 
-        // myLoop()
-    </script>
 </body>
 
 </html>

@@ -17,6 +17,20 @@
     "department": "Department",
     "message": "Message",
     "send": "Send",
+    "all": "All",
+    "residential": "Residential",
+    "peace": "Peace",
+    "factory": "Factory",
+    "commercial": "Commercial-Entertainment",
+    "town": "Town",
+    "project_title": "Project Title",
+    "employer": "Employer:",
+    "services": "Services:",
+    "location": "Location:",
+    "time": "Time:",
+    "gallery": "Gallery",
+    "project_description" : "The first signs of the use of iron date back to the time of the Sumerians and Egyptians, who made small items such as bayonets and ornaments with the iron discovered from meteorites around 4000 BC. It was considered gold. Iron is produced as a by-product of refining copper and could not be reproduced by the metallurgy of that time.",
+    "information": "Information",
     "zhikan_address": "Tehran, sheikh bahaei Squere, east daneshvar street, 36 No, 3 floor,"
 
 }

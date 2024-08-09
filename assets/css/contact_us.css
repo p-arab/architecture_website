@@ -131,6 +131,14 @@ textarea:focus-visible {
     .contact_us_map {
         flex-direction: column-reverse;
     }
+    [lang="fa"] .text-input-label2 {
+        right: 16px !important;
+    }
+    
+    [lang="en"] .text-input-label2 {
+        left: 16px !important;
+    }
+    
 }
 
 @media screen and (min-width: 768px) {
@@ -140,20 +148,14 @@ textarea:focus-visible {
     }
 }
 
-[lang="fa"] .input_contact_wrapper>div>div:first-child {
+[lang="fa"] .input_contact_wrapper>div>div:first-child,
+[lang="en"] .input_contact_wrapper>div>div:nth-child(2)  {
     padding-right: 0 !important;
 }
 
-[lang="en"] .input_contact_wrapper>div>div:first-child {
-    padding-left: 0 !important;
-}
-
+[lang="en"] .input_contact_wrapper>div>div:first-child,
 [lang="fa"] .input_contact_wrapper>div>div:nth-child(2) {
     padding-left: 0 !important;
-}
-
-[lang="en"] .input_contact_wrapper>div>div:nth-child(2) {
-    padding-right: 0 !important;
 }
 
 .info_row {
@@ -184,18 +186,10 @@ textarea:focus-visible {
 }
 
 
-#name:focus+label {
-    display: none;
-}
-#email:focus+label {
-    display: none;
-}
-#subject:focus+label {
-    display: none;
-}
-#department:focus+label {
-    display: none;
-}
+#name:focus+label,
+#email:focus+label,
+#subject:focus+label,
+#department:focus+label,
 #message:focus+label {
     display: none;
 }

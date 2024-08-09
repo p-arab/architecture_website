@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جزيیات پروژه</title>
+    <title data-i18n="zhikan_title"></title>
 
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/project_details.css">
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="../assets/css/footer.css">
@@ -21,22 +21,18 @@
         <img alt="zhikan logo" id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-en.png" />
 
         <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
-            <a href="#" onclick="showProjects()">پروژه ها</a>
-            <a href="#" onclick="showAboutUs()">درباره ما</a>
-            <a href="#" onclick="showContactUs()">تماس با ما</a>
-            <!-- <a href="#">مجله</a> -->
-            <a class="dropdown">
-                مجله
-                <div class="dropdown-content">
-                    <p>منو تستی</p>
-                    <p>منو تستی</p>
-                </div>
-            </a>
+            <a href="#" onclick="showProjects()" data-i18n="projects"></a>
+            <a href="#" onclick="showAboutUs()" data-i18n="about_us"></a>
+            <a href="#" onclick="showContactUs()" data-i18n="contact_us"></a>
+            <a href="#" onclick="showContactUs()" data-i18n="our_colleagues"></a>
         </div>
 
 
         <div id="language_wrapper" class="language_wrapper">
-            <div class="language_txt">فارسی</div>
+            <span id="language_txt_fa" class="language_txt px-2" href="#"
+                onclick="toggleSelectedLanguage('fa')">فارسی</span>
+            <span id="language_txt_en" class="language_txt" href="#"
+                onclick="toggleSelectedLanguage('en')">English</span>
         </div>
 
 
@@ -48,22 +44,22 @@
                 <span></span>
                 <ul id="menu">
                     <a href="#" onclick="showProjects()">
-                        <li>پروژه ها</li>
+                        <li data-i18n="projects"></li>
                     </a>
                     <a href="#" onclick="showAboutUs()">
-                        <li>درباره ما</li>
+                        <li data-i18n="about_us"></li>
                     </a>
                     <a href="#" onclick="showContactUs()">
-                        <li>تماس با ما</li>
+                        <li data-i18n="contact_us"></li>
                     </a>
                     <a class="dropdown">
-                        <li>مجله</li>
+                        <li data-i18n="other"></li>
                         <div class="dropdown-content">
-                            <p>منو تستی</p>
+                            <p data-i18n="our_colleagues"></p>
                         </div>
                     </a>
                     <!-- <a href="#">
-                <li>مجله</li>
+                <li data-i18n="other"></li>
               </a> -->
                 </ul>
             </div>
@@ -73,58 +69,34 @@
     <div id="project_details_wrapper" class="row project_details_wrapper m-0">
         <div class="col-12 col-md-3 ">
             <div class="card_sidebar">
-                <div class="title_sidebar">
-                    عنوان پروژه
+                <div class="title_sidebar" data-i18n="project_title"></div>
+                <div class="desc_sidebar" data-i18n="employer">
                 </div>
-                <div class="desc_sidebar">
-                    کارفرما: جناب اقای حدادی
+                <div class="desc_sidebar" data-i18n="services">
                 </div>
-                <div class="desc_sidebar">
-                    خدمات: طراحی
+                <div class="desc_sidebar" data-i18n="location">
                 </div>
-                <div class="desc_sidebar">
-                    مکان: تهران
-                </div>
-                <div class="desc_sidebar">
-                    زمان: 1395
+                <div class="desc_sidebar" data-i18n="time">
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-9" style="overflow: hidden;">
             <div style="position: relative;">
                 <img id="main_pic" class="main_pic" src="../assets/images/Project-Pic.png" alt="Main Picture">
-                <button class="gallery-btn" onclick="location.href= './project_details_gallery.html';">گالری</button>
+                <button class="gallery-btn" onclick="location.href= './project_details_gallery.html';"
+                    data-i18n="gallery"></button>
             </div>
 
-            <div class="detail_title">
-                تایتل
-            </div>
-            <div class="detail_desc">
-                اولین نشانه های استفاده ار آهن به زمان سومریان و مصریان برمیگردد که تقریبا 4000 سال قبل از میلاد با آهن
-                کشف شده
-                از شهاب سنگ ها اقلام کوچک مثل سرنیزه و زیورآلات می ساختند.از آهن ظاهرا تنها در تشریفات استفاده میشد و
-                آهن فلزی
-                گرانبها حتی با ارزش تر از طلا به حساب می آمد.آهن به عنوان یک محصول جانبی تصفیه مس تولیدمی شود و بوسیله
-                متالورژی
-                آن زمان قابل تولید مجدد نبوده است.این فرایند در کوره های ساده با استفاده از ذغال چوب و دمش هوا به صورت
-                دستی
-                انجام می شد. از 1600 تا 1200 قبل از میلاد در خاورمیانه بطور روزافزون از این فلز استفاده می شد، اما
-                جایگزین
-                کاربرد برنز در آن زمان نشد.از 1200تا 1000سال قبل از میلاد در خاورمیانه یک جابجایی سریع در تبدیل ابزار و
-                سلاح های
-                برنزی به آهنی صورت گرفت.عامل مهم در این جابجایی مختل شدن تامین قلع بود. این دوره که در زمان های مختلف و
-                در نقاط
-                مختلفی از جهان رخ داد، دوره ای از تمدن به نام عصر آهن را به وجود آورد.
+            <div class="detail_title" data-i18n="project_title"></div>
+            <div class="detail_desc" data-i18n="project_description">
             </div>
         </div>
 
         <div class="footer_wrapper">
             <span class="gray_footer">
-                کلیه ی حقوق این سایت مربوط به
-                <span class="colored_footer">
-                    گروه مهندسین مشاور ژیکان طرح و توسعه
-                </span>
-                است.
+                <span data-i18n="all_rights"></span>
+                <span class="colored_footer" data-i18n="jikan_group"></span>
+                <span data-i18n="is"></span>
             </span>
         </div>
 
