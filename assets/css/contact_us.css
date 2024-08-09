@@ -9,10 +9,17 @@ html {
 
 body {
     font-family: "peyda-medium" !important;
-    direction: rtl;
     background-color: #F2F2F3 !important;
     overflow: auto;
     font-weight: 500;
+}
+
+[lang="en"] body {
+    direction: ltr;
+}
+
+[lang="fa"] body {
+    direction: rtl;
 }
 
 .contact_us_wrapper {
@@ -51,6 +58,8 @@ textarea:focus-visible {
     padding-bottom: 2vh !important;
     gap: 2vh;
 }
+
+
 
 .send_btn {
     background-color: #263F99;
@@ -129,4 +138,64 @@ textarea:focus-visible {
         position: absolute;
         bottom: 0;
     }
+}
+
+[lang="fa"] .input_contact_wrapper>div>div:first-child {
+    padding-right: 0 !important;
+}
+
+[lang="en"] .input_contact_wrapper>div>div:first-child {
+    padding-left: 0 !important;
+}
+
+[lang="fa"] .input_contact_wrapper>div>div:nth-child(2) {
+    padding-left: 0 !important;
+}
+
+[lang="en"] .input_contact_wrapper>div>div:nth-child(2) {
+    padding-right: 0 !important;
+}
+
+.info_row {
+    text-align: start;
+}
+
+.text-input-label, .text-input-label2 {
+    position: absolute;
+    top: 35%;
+    color: #757575;
+    font-size: 12px;
+}
+
+[lang="fa"] .text-input-label {
+    right: 16px;
+}
+
+[lang="en"] .text-input-label {
+    left: 16px;
+}
+
+[lang="fa"] .text-input-label2 {
+    right: 30px;
+}
+
+[lang="en"] .text-input-label2 {
+    left: 30px;
+}
+
+
+#name:focus+label {
+    display: none;
+}
+#email:focus+label {
+    display: none;
+}
+#subject:focus+label {
+    display: none;
+}
+#department:focus+label {
+    display: none;
+}
+#message:focus+label {
+    display: none;
 }

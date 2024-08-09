@@ -10,5 +10,13 @@
     "person_description": "Person Description",
     "zhikan_title": "Jikan-Design and development consultant engineers",
     "all_rights": "All rights of this site are related to",
-    "jikan_group": "Jikan Group of Design and Development Consulting Engineers"
+    "jikan_group": "Jikan Group of Design and Development Consulting Engineers",
+    "name_family": "Name & Family",
+    "email": "Email",
+    "subject": "Subject",
+    "department": "Department",
+    "message": "Message",
+    "send": "Send",
+    "zhikan_address": "Tehran, sheikh bahaei Squere, east daneshvar street, 36 No, 3 floor,"
+
 }

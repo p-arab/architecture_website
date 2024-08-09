@@ -16,6 +16,7 @@ function showProjectDetails() {
 
 window.addEventListener('DOMContentLoaded', async () => {
     const userPreferredLanguage = localStorage.getItem('language') || 'fa';
+    document.documentElement.setAttribute('lang', userPreferredLanguage);
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
     toggleArabicStylesheet(userPreferredLanguage);
@@ -34,9 +35,9 @@ window.addEventListener('DOMContentLoaded', async () => {
 async function changeLanguage(lang) {
     await setLanguagePreference(lang);
 
+    document.documentElement.setAttribute('lang', lang);
     const langData = await fetchLanguageData(lang);
     updateContent(langData);
-    document.documentElement.setAttribute('lang', lang);
     toggleArabicStylesheet(lang); // Toggle Arabic stylesheet
 }
 

@@ -29,3 +29,7 @@
       font-size: 3.3vw;
     }
   }
+
+  [lang='en'] .gray_footer {
+    font-size: 18px;
+  }

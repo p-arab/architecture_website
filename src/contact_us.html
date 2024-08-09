@@ -2,7 +2,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تماس با ما</title>
+    <title data-i18n="zhikan_title"></title>
 
     <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.css">
     <script src="../assets/js/bootstrap/jquery-3.6.0.js"></script>
@@ -20,22 +20,18 @@
     <div id="blue_bg_container" class="blue_bg_container">
         <img id="logo_img" class="logo_img" src="../assets/images/zhikan-logo-en.png" />
         <div id="menu_desktop_wrapper" class="menu_desktop_wrapper">
-            <a href="#" onclick="showProjects()">پروژه ها</a>
-            <a href="#" onclick="showAboutUs()">درباره ما</a>
-            <a href="#" onclick="ShowContactUs()">تماس با ما</a>
-            <!-- <a href="#">مجله</a> -->
-            <a class="dropdown">
-                مجله
-                <div class="dropdown-content">
-                    <p>منو تستی</p>
-                    <p>منو تستی</p>
-                </div>
-            </a>
+            <a href="#" onclick="showProjects()" data-i18n="projects"></a>
+            <a href="#" onclick="showAboutUs()" data-i18n="about_us"></a>
+            <a href="#" onclick="showContactUs()" data-i18n="contact_us"></a>
+            <a href="#" onclick="showContactUs()" data-i18n="our_colleagues"></a>
         </div>
 
 
         <div id="language_wrapper" class="language_wrapper">
-            <div class="language_txt">فارسی</div>
+            <span id="language_txt_fa" class="language_txt px-2" href="#"
+                onclick="toggleSelectedLanguage('fa')">فارسی</span>
+            <span id="language_txt_en" class="language_txt" href="#"
+                onclick="toggleSelectedLanguage('en')">English</span>
         </div>
 
 
@@ -72,29 +68,32 @@
         <div class="d-flex flex-wrap">
             <div class="col-12 col-md-6 input_contact_wrapper">
                 <div class=" row m-0 justify-content-between">
-                    <div class="col-12 col-md-6 pr-0">
-                        <input placeholder="نام و نام خانوادگی" class="w-100" type="text" id="fname" name="fname">
+                    <div class="col-12 col-md-6">
+                        <input class="w-100" type="text" id="name" >
+                        <label class="text-input-label" for="name" data-i18n="name_family"></label>
                     </div>
-                    <div class="col-12 col-md-6 pl-0">
-                        <input placeholder="ایمیل" class="w-100" type="text" id="fname" name="fname">
+                    <div class="col-12 col-md-6">
+                        <input  class="w-100" type="text" id="email">
+                        <label class="text-input-label2" for="email" data-i18n="email"></label>
                     </div>
                 </div>
                 <div class=" row m-0 justify-content-between">
-                    <div class="col-12 col-md-6 pr-0">
-                        <input placeholder="موضوع" class="w-100" type="text" id="fname" name="fname">
+                    <div class="col-12 col-md-6">
+                        <input class="place w-100" id="subject" type="text" id="subject">
+                        <label class="text-input-label" for="subject" data-i18n="subject"></label>
                     </div>
-                    <div class="col-12 col-md-6 pl-0">
-                        <input placeholder="دپارتمان" class="w-100" type="text" id="fname" name="fname">
+                    <div class="col-12 col-md-6">
+                        <input class="w-100" type="text" id="department">
+                        <label class="text-input-label2" for="department" data-i18n="department"></label>
                     </div>
                 </div>
                 <div class="col-12 p-0">
-                    <textarea placeholder="پیغام" class="w-100" id="w3review" name="w3review" rows="4"
+                    <textarea class="w-100" id="message" rows="4"
                         cols="50"></textarea>
+                        <label class="text-input-label" for="message" data-i18n="message"></label>
                 </div>
                 <div class="row m-0">
-                    <button disabled class="send_btn col-12 col-md-3">
-                        ارسال
-                    </button>
+                    <button disabled class="send_btn col-12 col-md-3" data-i18n="send"></button>
                 </div>
             </div>
 
@@ -103,36 +102,32 @@
                     <img class="map_img" src="../assets/images/map.png" alt="Map Location" />
                 </div>
 
-                <div class="row m-0 text-right">
-                    <div class="col-6 p-0">
+                <div class="row m-0 text-right ">
+                    <div class="col-6 p-0 info_row">
                         <img class="contact_icon" alt="Pocket Icon" src="../assets/images/sms.png">
                         <span>
                             info@zhikan.com
                         </span>
                     </div>
-                    <div class="col-6 p-0">
+                    <div class="col-6 p-0 info_row">
                         <img class="contact_icon" alt="Phone Icon" src="../assets/images/call.png">
                         <span>
                             021-88215037
                         </span>
                     </div>
                 </div>
-                <div class="m-0 text-right">
+                <div class="m-0 info_row">
                     <img class="contact_icon" alt="Phone Icon" src="../assets/images/location.png">
-                    <span>
-                        تهران، میدان شیخ بهایی-خیابان دانشور شرقی-پلاک ۳۶ طبقه ۳ واحد ۵
-                    </span>
+                    <span data-i18n="zhikan_address"></span>
                 </div>
             </div>
         </div>
 
-        <div id="footer_wrapper" class="footer_wrapper footer_contact_us mt-0">
+        <div class="footer_wrapper">
             <span class="gray_footer">
-                کلیه ی حقوق این سایت مربوط به
-                <span class="colored_footer">
-                    گروه مهندسین مشاور ژیکان طرح و توسعه
-                </span>
-                است.
+                <span data-i18n="all_rights"></span>
+                <span class="colored_footer" data-i18n="jikan_group"></span>
+                <span data-i18n="is"></span>
             </span>
         </div>
     </div>
